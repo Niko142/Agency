@@ -1,6 +1,7 @@
 {
-    "emmet.preferences": {},
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact"
-    }
+  "emmet.preferences": {},
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "cSpell.words": ["Birmark", "Dribbble", "Grotesk", "Hubspot", "Positivus"]
 }
