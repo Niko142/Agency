@@ -1,13 +1,4 @@
-import type { IService, ISteps, ITeamMember, ITestimonials } from "@/types";
-
-import Illustration1 from "@assets/images/Illustration1.svg";
-import Illustration2 from "@assets/images/Illustration2.svg";
-import Illustration3 from "@assets/images/Illustration3.svg";
-import Illustration4 from "@assets/images/Illustration4.svg";
-import Illustration5 from "@assets/images/Illustration5.svg";
-import Illustration6 from "@assets/images/Illustration6.svg";
-import Link1 from "@assets/images/Link1.svg";
-import Link2 from "@assets/images/Link2.svg";
+import type { ISteps, ITeamMember, ITestimonials } from "@/types";
 
 import JohnPhoto from "@assets/images/John.png";
 import JanePhoto from "@assets/images/Jane.png";
@@ -16,61 +7,12 @@ import EmilyPhoto from "@assets/images/Emily.png";
 import BrianPhoto from "@assets/images/Brian.png";
 import SarahPhoto from "@assets/images/Sarah.png";
 
-export const services: IService[] = [
-  {
-    id: 1,
-    art1: "Search engine",
-    art2: "optimization",
-    image: Illustration1,
-    link: Link1,
-    green: false,
-    black: false,
-  },
-  {
-    id: 2,
-    art1: "Pay-per-click",
-    art2: "advertising",
-    image: Illustration2,
-    link: Link1,
-    green: true,
-    black: false,
-  },
-  {
-    id: 3,
-    art1: "Social media",
-    art2: "Marketing",
-    image: Illustration3,
-    link: Link2,
-    green: false,
-    black: true,
-  },
-  {
-    id: 4,
-    art1: "Email",
-    art2: "Marketing",
-    image: Illustration4,
-    link: Link1,
-    green: false,
-    black: false,
-  },
-  {
-    id: 5,
-    art1: "Content",
-    art2: "creation",
-    image: Illustration5,
-    link: Link1,
-    green: true,
-    black: false,
-  },
-  {
-    id: 6,
-    art1: "Analytics and",
-    art2: "Tracking",
-    image: Illustration6,
-    link: Link2,
-    green: false,
-    black: true,
-  },
+export const headerOptions = [
+  { title: "About us" },
+  { title: "Services" },
+  { title: "Use Cases" },
+  { title: "Pricing" },
+  { title: "Blog" },
 ];
 
 export const teamMembers: ITeamMember[] = [

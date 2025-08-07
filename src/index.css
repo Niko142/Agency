@@ -1,11 +1,24 @@
-*/ :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+@import "tailwindcss";
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --green: #b9ff66;
+  --dark: #191a23;
+  --grey: #f3f3f3;
+  font-family:
+    "SpaceGrotesk",
+    Arial,
+    -apple-system,
+    sans-serif;
   font-weight: 400;
 
+  max-width: 1440px;
+  margin-inline: auto;
+
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,9 +26,58 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: "SpaceGrotesk", sans-serif;
+  font-weight: 500;
+}
+
+@theme {
+  --color-dark: #191a23;
+  --color-green: #b9ff66;
+  --color-grey: #f3f3f3;
+
+  --custom-shadow: 0 5px var(--color-dark);
+}
+
+p {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 43px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
 }

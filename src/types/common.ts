@@ -1,11 +1,9 @@
 export interface IService {
   id?: string | number;
-  art1: string;
-  art2: string;
-  image: string;
-  link: string;
-  green: boolean;
-  black: boolean;
+  topTitle: string;
+  bottomTitle: string;
+  src: string;
+  cardVariant: "green" | "grey" | "dark" | "dark-green";
 }
 
 export interface ITeamMember {

@@ -1,56 +1,21 @@
 import { useState } from "react";
-import { services, teamMembers, processSteps } from "@/data/data";
-import type { IService, ISteps, ITeamMember } from "./types";
-import "@/App.css";
-import Slider from "@/components/Slider";
+import { teamMembers, processSteps } from "@/data/data";
+import type { ISteps, ITeamMember } from "./types";
 
-import Logo from "@assets/images/logo.png";
+import Slider from "@components/Slider";
+
 import LogoLight from "@assets/images/logo-light.png";
-import Navigate from "@assets/images/navigate.png";
-import Amazon from "@assets/images/amazon.png";
-import Dribbble from "@assets/images/dribbble.png";
-import Hubspot from "@assets/images/hubspot.png";
-import Notion from "@assets/images/notion.png";
-import Netflix from "@assets/images/netflix.png";
-import Zoom from "@assets/images/zoom.png";
 import Proposal from "@assets/images/proposal.png";
 import Linkedin from "@assets/images/linkedin.png";
 import Twitter from "@assets/images/twitter.png";
 import SpecialIcon from "@assets/images/SpecialIcon.svg";
 import Mask from "@assets/images/Mask.svg";
+import BlockTitle from "@components/UI/BlockTitle";
+import NavigationBlock from "@components/Navigation/NavigationBlock";
+import ServiceBlock from "@components/Services/ServiceBlock";
 
 function App() {
   const [active, setActive] = useState(processSteps);
-
-  interface TitleProps {
-    classname: string;
-    head: string;
-    text: string;
-  }
-
-  const TitleBlock = ({ classname, head, text }: TitleProps) => {
-    return (
-      <div className={classname}>
-        <article className="heading">{head}</article>
-        <p>{text}</p>
-      </div>
-    );
-  };
-
-  interface LinkProps {
-    src: string;
-    white: boolean;
-  }
-
-  const Link = ({ src, white }: LinkProps) => {
-    return (
-      <div className={white ? "alternative_container" : "link_container"}>
-        <a href="/#">
-          <img className="link" src={src} alt="Link" />
-        </a>
-      </div>
-    );
-  };
 
   interface SpecialLinkProps {
     src: string;
@@ -63,43 +28,6 @@ function App() {
       </div>
     );
   };
-
-  const ServiceCard = ({ image, art1, art2, green, black, link }: IService) => {
-    return (
-      <div
-        className="service_block"
-        id={green ? "green" : black ? "black" : ""}
-      >
-        <div className="service_context">
-          <div style={{ display: "", marginBottom: "93px" }}>
-            <article className={green ? "head_white" : "head_green"}>
-              {art1}
-            </article>
-            <article className={green ? "head_white" : "head_green"}>
-              {art2}
-            </article>
-          </div>
-          <Link src={link} white={black} />
-        </div>
-        <div className="service_img">
-          <img src={image} alt="Img" />
-        </div>
-      </div>
-    );
-  };
-  const Service = services.map((item) => {
-    return (
-      <ServiceCard
-        key={item.id}
-        art1={item.art1}
-        black={item.black}
-        green={item.green}
-        art2={item.art2}
-        image={item.image}
-        link={item.link}
-      />
-    );
-  });
 
   interface CaseProps {
     text: string;
@@ -124,7 +52,7 @@ function App() {
           item.isOpen = !item.isOpen;
         }
         return item;
-      })
+      }),
     );
   }
 
@@ -205,156 +133,33 @@ function App() {
       />
     );
   });
+
   return (
-    <>
-      <section className="landing">
-        <header className="header">
-          <div className="header_wrap">
-            <div className="header-logo">
-              <img src={Logo} alt="Logo" />
-            </div>
-            <nav className="header_nav">
-              <ul className="header_ul">
-                <li>
-                  <a className="header_a" href="/#">
-                    About us
-                  </a>
-                </li>
-                <li>
-                  <a className="header_a" href="/#">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a className="header_a" href="/#">
-                    Use Cases
-                  </a>
-                </li>
-                <li>
-                  <a className="header_a" href="/#">
-                    Pricing
-                  </a>
-                </li>
-                <li>
-                  <a className="header_a" href="/#">
-                    Blog
-                  </a>
-                </li>
-                <button
-                  onClick={() => window.location.reload()}
-                  className="button_second"
-                >
-                  Request a quote
-                </button>
-              </ul>
-            </nav>
-          </div>
-        </header>
-      </section>
-      <section className="navigate">
-        <div className="navigate_wrap">
-          <h1 id="nav_id">Navigating the digital landscape for success</h1>
-          <div className="navigate_frame">
-            <img src={Navigate} alt="Frame" />
-          </div>
-          <span className="navigate_span">
-            Our digital marketing agency helps business grow and succeed online
-            through a range of services including SEO, PPC, social media
-            marketing and content creation.
-          </span>
-          <button className="button_primary" id="butt">
-            Book a consultation
-          </button>
-        </div>
-      </section>
-      <section className="brands">
-        <ul>
-          <li>
-            <a href="/#">
-              <img className="icon_amazon" src={Amazon} alt="Amazon" />
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <img className="icon_dribble" src={Dribbble} alt="Dribble" />
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <img className="icon_hubspot" src={Hubspot} alt="Hubspot" />
-            </a>
-          </li>
-          <li>
-            <a href="/#">
-              <img className="icon_notion" src={Notion} alt="Notion" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="/#"
-              // onMouseOver={() => setNet(false)}
-              // onMouseOut={() => setNet(true)}
-            >
-              <img
-                className="icon_netflix"
-                src={Netflix}
-                // src={net ? NoNetflix : Netflix}
-                alt="Netflix"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="/#"
-              // onMouseOver={() => setZoom(false)}
-              // onMouseOut={() => setZoom(true)}
-            >
-              <img
-                className="icon_zoom"
-                src={Zoom}
-                // src={zoom ? NoZoom : Zoom}
-                alt="Zoom"
-              />
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section className="services">
-        <TitleBlock
-          classname={"services_header"}
-          head={"Services"}
-          text={`
-          At our digital marketing agency, we offer a range of services to
-          help businesses grow and succeed online. These services include:
-          `}
-        />
-        <div className="services_content">{Service}</div>
-      </section>
-      <section className="proposal">
-        <div className="proposal_wrap">
-          <div className="proposal_content">
-            <h3>Let’s make things happen</h3>
-            <p>
+    <main className="px-5 lg:px-10 xl:px-[100px]">
+      <NavigationBlock />
+      <ServiceBlock />
+      <section className="proposal mb-[140px] py-[23.5px]">
+        <div className="bg-grey grid grid-cols-2 rounded-[45px] p-[60px]">
+          <div className="flex flex-col gap-[26px]">
+            <h3 className="leading-[38px]">Let’s make things happen</h3>
+            <p className="leading-[23px]">
               Contact us today to learn more about how our digital marketing
               services can help your business grow and succeed online.
             </p>
-            <button className="button_primary">Get your free proposal</button>
+            <button className="bg-dark hover:text-dark hover:bg-green self-baseline rounded-[14px] px-[35px] py-5 text-xl leading-7 text-white transition-colors ease-in-out">
+              Get your free proposal
+            </button>
           </div>
-          <div className="proposal_img">
-            <img src={Proposal} alt="Proposal" />
-          </div>
+          <img className="" src={Proposal} alt="Proposal" />
         </div>
       </section>
       <section className="case">
-        <TitleBlock
-          classname={"case_header"}
-          head={"Case Studies"}
-          text={
-            "Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
-          }
+        <BlockTitle
+          title="Case Studies"
+          description="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
         />
-        {/* Можно добавить компонент, чтобы это не перечислять */}
-        <ul className="case_wrap">
+
+        <ul className="bg-dark rounded-[45px] px-[60px] py-[70px] text-white">
           <CaseBlock
             text={` For a local restaurant, we implemented a targeted PPC campaign that
               resulted in a 50% increase in website traffic and a 25% increase in sales.`}
@@ -369,40 +174,33 @@ function App() {
           />
         </ul>
       </section>
+
       <section className="working">
-        <TitleBlock
-          classname={"working_header"}
-          head={"Our working process"}
-          text={"Step-by-Step Guide to Achieving Your Business Goals"}
+        <BlockTitle
+          title="Our working process"
+          description="Step-by-Step Guide to Achieving Your Business Goals"
         />
         <div className="work_wrap">{Work}</div>
       </section>
       <section className="team">
-        <TitleBlock
-          classname={"team_header"}
-          head={"Team"}
-          text={
-            "Meet the skilled and experienced team behind our successful digital marketing strategies"
-          }
+        <BlockTitle
+          title="Team"
+          description="Meet the skilled and experienced team behind our successful digital marketing strategies"
         />
         <div className="team_wrap">{Team}</div>
         <button className="button_primary">See all team</button>
       </section>
       <section className="test">
-        <TitleBlock
-          classname={"test_header"}
-          head={"Testimonials"}
-          text={
-            "Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
-          }
+        <BlockTitle
+          title="Testimonials"
+          description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
         />
         <Slider />
       </section>
       <section className="contact">
-        <TitleBlock
-          classname={"contact_header"}
-          head={"Contact Us"}
-          text={"Connect with Us: Let's Discuss Your Digital Marketing Needs"}
+        <BlockTitle
+          title="Contact Us"
+          description="Connect with Us: Let's Discuss Your Digital Marketing Needs"
         />
         <div className="contact_wrap">
           <form action="" style={{ display: "block" }}>
@@ -492,7 +290,7 @@ function App() {
           </p>
         </div>
       </footer>
-    </>
+    </main>
   );
 }
 
