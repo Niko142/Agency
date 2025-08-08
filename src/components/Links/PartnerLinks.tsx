@@ -1,13 +1,12 @@
+import type { PartnerItem } from "@/types";
 import { PARTNER_ITEMS } from "./data";
-
-import type { PartnerItem } from "./types";
 
 const PartnerLinks = () => {
   return (
-    <ul className="flex flex-wrap items-center justify-between gap-y-5">
+    <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-5 md:justify-between">
       {PARTNER_ITEMS.map((link: PartnerItem, id: number) => {
         return (
-          <li key={id} className="mr-4.5 last:mr-0">
+          <li key={id} className="shrink-0">
             <a href={`/${link.href}`}>
               <img
                 className="grayscale hover:grayscale-0"

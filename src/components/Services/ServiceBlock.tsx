@@ -4,13 +4,14 @@ import ServiceCard from "./ServiceCard";
 
 const ServiceBlock = () => {
   return (
-    <section className="services mb-[100px]">
+    <section className="mb-9 sm:mb-16 md:mb-[100px]">
       <BlockTitle
         title="Services"
         description="At our digital marketing agency, we offer a range of services to
           help businesses grow and succeed online. These services include:"
+        descriptionSize="580px"
       />
-      <div className="grid grid-cols-1 gap-10 xl:grid-cols-2">
+      <div className="grid gap-5 lg:grid-cols-2 xl:gap-10">
         {services.map((card, id) => {
           return (
             <ServiceCard

@@ -1,11 +1,4 @@
-import type { ISteps, ITeamMember, ITestimonials } from "@/types";
-
-import JohnPhoto from "@assets/images/John.png";
-import JanePhoto from "@assets/images/Jane.png";
-import MichaelPhoto from "@assets/images/Michael.png";
-import EmilyPhoto from "@assets/images/Emily.png";
-import BrianPhoto from "@assets/images/Brian.png";
-import SarahPhoto from "@assets/images/Sarah.png";
+import type { ISteps, ITestimonials } from "@/types";
 
 export const headerOptions = [
   { title: "About us" },
@@ -13,57 +6,6 @@ export const headerOptions = [
   { title: "Use Cases" },
   { title: "Pricing" },
   { title: "Blog" },
-];
-
-export const teamMembers: ITeamMember[] = [
-  {
-    id: 1,
-    image: JohnPhoto,
-    name: "John Smith",
-    employee: "CEO and Founder",
-    description: `10+ years of experience in digital marketing. 
-    Expertise in SEO, PPC, and content strategy`,
-  },
-  {
-    id: 2,
-    image: JanePhoto,
-    name: "Jane Doe",
-    employee: "Director of Operations",
-    description: `7+ years of experience in project management 
-    and team leadership. Strong organizational and communication skills`,
-  },
-  {
-    id: 3,
-    image: MichaelPhoto,
-    name: "Michael Brown",
-    employee: "Senior SEO Specialist",
-    description: `5+ years of experience in SEO and content creation. 
-    Proficient in keyword research and on-page optimization`,
-  },
-  {
-    id: 4,
-    image: EmilyPhoto,
-    name: "Emily Johnson",
-    employee: "PPC Manager",
-    description: `3+ years of experience in paid search advertising. 
-    Skilled in campaign management and performance analysis`,
-  },
-  {
-    id: 5,
-    image: BrianPhoto,
-    name: "Brian Williams",
-    employee: "Social Media Specialist",
-    description: `4+ years of experience in social media marketing. 
-    Proficient in creating and scheduling content, analyzing metrics, and building engagement`,
-  },
-  {
-    id: 6,
-    image: SarahPhoto,
-    name: "Sarah Kim",
-    employee: "Content Creator",
-    description: `2+ years of experience in writing and editing. 
-    Skilled in creating compelling, SEO-optimized content for various industries`,
-  },
 ];
 
 export const processSteps: ISteps[] = [

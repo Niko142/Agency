@@ -1,49 +1,22 @@
 import { useState } from "react";
-import { teamMembers, processSteps } from "@/data/data";
-import type { ISteps, ITeamMember } from "./types";
+import { processSteps } from "@/data/data";
+import type { ISteps } from "./types";
 
 import Slider from "@components/Slider";
 
 import LogoLight from "@assets/images/logo-light.png";
-import Proposal from "@assets/images/proposal.png";
 import Linkedin from "@assets/images/linkedin.png";
 import Twitter from "@assets/images/twitter.png";
-import SpecialIcon from "@assets/images/SpecialIcon.svg";
 import Mask from "@assets/images/Mask.svg";
 import BlockTitle from "@components/UI/BlockTitle";
 import NavigationBlock from "@components/Navigation/NavigationBlock";
 import ServiceBlock from "@components/Services/ServiceBlock";
+import CaseBlock from "./components/Case/CaseBlock";
+import PersonalProposal from "./components/PersonalProposal";
+import TeamBlock from "./components/Team/TeamBlock";
 
 function App() {
   const [active, setActive] = useState(processSteps);
-
-  interface SpecialLinkProps {
-    src: string;
-  }
-
-  const SpecialLink = (props: SpecialLinkProps) => {
-    return (
-      <div className="special_link">
-        <img className="special_link" src={props.src} alt="Link" />
-      </div>
-    );
-  };
-
-  interface CaseProps {
-    text: string;
-  }
-
-  const CaseBlock = (props: CaseProps) => {
-    return (
-      <>
-        <li>
-          <p>{props.text}</p>
-          <SpecialLink src={SpecialIcon} />
-        </li>
-        <hr className="line" />
-      </>
-    );
-  };
 
   function OpenWork(id: number) {
     setActive(
@@ -101,99 +74,26 @@ function App() {
     );
   });
 
-  const TeamBlock = ({ description, image, name, employee }: ITeamMember) => {
-    return (
-      <div className="team_block">
-        <div className="team_person">
-          <div className="team_img">
-            <img src={image} alt="Person" />
-          </div>
-          <div className="team_context">
-            <a href="/#"> </a>
-            <h4>{name}</h4>
-            <p>{employee}</p>
-          </div>
-        </div>
-        <hr className="team_line"></hr>
-        <div className="team_description">
-          <p style={{ lineHeight: "23px" }}>{description}</p>
-        </div>
-      </div>
-    );
-  };
-
-  const Team = teamMembers.map((item) => {
-    return (
-      <TeamBlock
-        key={item.id}
-        image={item.image}
-        name={item.name}
-        employee={item.employee}
-        description={item.description}
-      />
-    );
-  });
-
   return (
-    <main className="px-5 lg:px-10 xl:px-[100px]">
+    <main className="px-2.5 sm:px-5 lg:px-10 xl:px-[100px]">
       <NavigationBlock />
       <ServiceBlock />
-      <section className="proposal mb-[140px] py-[23.5px]">
-        <div className="bg-grey grid grid-cols-2 rounded-[45px] p-[60px]">
-          <div className="flex flex-col gap-[26px]">
-            <h3 className="leading-[38px]">Let’s make things happen</h3>
-            <p className="leading-[23px]">
-              Contact us today to learn more about how our digital marketing
-              services can help your business grow and succeed online.
-            </p>
-            <button className="bg-dark hover:text-dark hover:bg-green self-baseline rounded-[14px] px-[35px] py-5 text-xl leading-7 text-white transition-colors ease-in-out">
-              Get your free proposal
-            </button>
-          </div>
-          <img className="" src={Proposal} alt="Proposal" />
-        </div>
-      </section>
-      <section className="case">
-        <BlockTitle
-          title="Case Studies"
-          description="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
-        />
-
-        <ul className="bg-dark rounded-[45px] px-[60px] py-[70px] text-white">
-          <CaseBlock
-            text={` For a local restaurant, we implemented a targeted PPC campaign that
-              resulted in a 50% increase in website traffic and a 25% increase in sales.`}
-          />
-          <CaseBlock
-            text={` For a B2B software company, we developed an SEO strategy that resulted in a
-              first page ranking for key keywords and a 200% increase in organic traffic.`}
-          />
-          <CaseBlock
-            text={` For a national retail chain, we created a social media marketing campaign that
-              increased followers by 25% and generated a 20% increase in online sales.`}
-          />
-        </ul>
-      </section>
-
+      <CaseBlock />
+      <PersonalProposal />
       <section className="working">
         <BlockTitle
           title="Our working process"
           description="Step-by-Step Guide to Achieving Your Business Goals"
+          descriptionSize="292px"
         />
         <div className="work_wrap">{Work}</div>
       </section>
-      <section className="team">
-        <BlockTitle
-          title="Team"
-          description="Meet the skilled and experienced team behind our successful digital marketing strategies"
-        />
-        <div className="team_wrap">{Team}</div>
-        <button className="button_primary">See all team</button>
-      </section>
+      <TeamBlock />
       <section className="test">
         <BlockTitle
           title="Testimonials"
           description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
+          descriptionSize="473px"
         />
         <Slider />
       </section>
@@ -201,6 +101,7 @@ function App() {
         <BlockTitle
           title="Contact Us"
           description="Connect with Us: Let's Discuss Your Digital Marketing Needs"
+          descriptionSize="323px"
         />
         <div className="contact_wrap">
           <form action="" style={{ display: "block" }}>

@@ -2,30 +2,36 @@ import PartnerLinks from "@components/Links/PartnerLinks";
 
 import Navigate from "@assets/images/navigate.png";
 import Header from "./Header";
+import Button from "@components/UI/Button";
 
 const NavigationBlock = () => {
   return (
-    <section className="navigation-bar mb-[140px] pt-[60px]">
+    <section className="navigation-bar mb-20 pt-8 sm:pt-[60px] md:mb-34 lg:mb-[140px]">
       <Header />
-      <div className="mb-[70px] flex justify-between">
-        <article className="flex max-w-[531px] flex-col gap-[35px]">
-          <h1 className="leading[77px] text-6xl">
+      <div className="mb-12 flex flex-col justify-between gap-y-4 sm:mb-[70px] md:flex-row">
+        <article className="flex flex-col gap-5 md:max-w-[531px] md:gap-[35px]">
+          <h1 className="leading-14 sm:leading-[77px]">
             Navigating the digital landscape for success
           </h1>
-          <p className="text-xl leading-7">
+          <img
+            src={Navigate}
+            alt="Frame"
+            className="max-h-[450px] self-baseline md:hidden"
+          />
+          <span className="w-full text-base leading-6 sm:text-xl sm:leading-7 md:max-w-[498px]">
             Our digital marketing agency helps business grow and succeed online
             through a range of services including SEO, PPC, social media
             marketing and content creation.
-          </p>
-          <button className="hover:bg-green bg-dark self-baseline rounded-[14px] px-[35px] py-5 text-xl leading-7 text-white transition-colors ease-in-out hover:text-black">
-            Book a consultation
-          </button>
+          </span>
+          <Button>Book a consultation</Button>
         </article>
-        <article className="">
+        <article className="hidden md:block">
           <img src={Navigate} alt="Frame" />
         </article>
       </div>
-      <article className="links">
+
+      {/* Партнеры */}
+      <article>
         <PartnerLinks />
       </article>
     </section>

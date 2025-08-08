@@ -12,10 +12,10 @@ const Header = () => {
   }
 
   return (
-    <header className="mb-[70px]">
+    <header className="mb-7 sm:mb-[70px]">
       <nav className="flex items-center justify-between">
         {/* Логотип */}
-        <img className="h-10 xl:h-full" src={Logo} alt="Logo" />
+        <img className="z-30 h-10 xl:h-full" src={Logo} alt="Logo" />
 
         {/* Desktop-bar */}
         <ul className="hidden items-center gap-10 text-lg leading-6 lg:flex xl:text-xl xl:leading-7">
@@ -33,7 +33,6 @@ const Header = () => {
             </button>
           </li>
         </ul>
-
         <BurgerMenuButton onClick={toggleOpenMenu} isOpen={isOpen} />
       </nav>
 

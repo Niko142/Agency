@@ -1,6 +1,6 @@
 import type { IService } from "@/types";
 
-import cardIllustration1 from "@assets/images/Illustration1.svg";
+import cardIllustration1 from "@assets/images/Illustration1.png";
 import cardIllustration2 from "@assets/images/Illustration2.svg";
 import cardIllustration3 from "@assets/images/Illustration3.svg";
 import cardIllustration4 from "@assets/images/Illustration4.svg";

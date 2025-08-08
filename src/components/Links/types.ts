@@ -1,5 +1,7 @@
-export interface PartnerItem {
-  src: string;
-  alt: string;
-  href?: string;
+export interface InfoLinkProps {
+  variant: "dark" | "light";
+}
+
+export interface EmployeeLinkProps {
+  link?: string;
 }

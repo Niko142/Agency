@@ -8,10 +8,17 @@ export interface IService {
 
 export interface ITeamMember {
   id?: string | number;
-  image: string;
+  link?: string;
+  photo: string;
   name: string;
   employee: string;
-  description: string;
+  experience: string;
+}
+
+export interface PartnerItem {
+  src: string;
+  alt: string;
+  href?: string;
 }
 
 export interface ISteps {

@@ -1,4 +1,4 @@
-import type { PartnerItem } from "./types";
+import type { PartnerItem } from "@/types";
 
 import Amazon from "@/assets/images/amazon.png";
 import Dribbble from "@/assets/images/dribbble.png";

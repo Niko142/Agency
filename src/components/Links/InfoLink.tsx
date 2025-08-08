@@ -1,14 +1,14 @@
 import { linkThemes } from "@/themes/themes";
-
-interface InfoLinkProps {
-  variant: "dark" | "light";
-}
+import type { InfoLinkProps } from "./types";
 
 const InfoLink = ({ variant }: InfoLinkProps) => {
   const { circle, arrow, textColor } = linkThemes[variant];
 
   return (
-    <div className="flex cursor-pointer items-center gap-[15px] hover:animate-pulse">
+    <a
+      href="/#"
+      className="flex cursor-pointer items-center gap-[15px] hover:animate-pulse"
+    >
       <svg
         width="41"
         height="41"
@@ -22,10 +22,13 @@ const InfoLink = ({ variant }: InfoLinkProps) => {
           fill={arrow}
         />
       </svg>
-      <p className="text-xl leading-7" style={{ color: textColor }}>
+      <span
+        className="text-base leading-5 text-nowrap sm:text-xl sm:leading-7"
+        style={{ color: textColor }}
+      >
         Learn more
-      </p>
-    </div>
+      </span>
+    </a>
   );
 };
 
