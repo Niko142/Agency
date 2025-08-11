@@ -2,12 +2,10 @@ import Button from "./UI/Button";
 import Proposal from "@assets/images/proposal.png";
 const PersonalProposal = () => {
   return (
-    <section className="proposal relative mb-14 py-[23.5px] sm:mb-24 md:mb-[140px]">
-      <div className="bg-grey grid justify-items-center rounded-3xl p-4 sm:rounded-[45px] sm:p-10 md:grid-cols-2 md:p-[60px]">
-        <div className="flex flex-col gap-[26px]">
-          <h3 className="leading-8 sm:leading-[38px]">
-            Let’s make things happen
-          </h3>
+    <section className="proposal relative mb-14 py-[23.5px] sm:mb-24 md:mb-35">
+      <div className="bg-grey grid justify-items-center rounded-3xl p-4 sm:rounded-[45px] sm:p-10 md:grid-cols-2 md:p-15">
+        <div className="flex flex-col gap-6.5">
+          <h3 className="leading-8 sm:leading-9.5">Let’s make things happen</h3>
           <p className="leading-[23px]">
             Contact us today to learn more about how our digital marketing
             services can help your business grow and succeed online.

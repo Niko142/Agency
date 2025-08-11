@@ -12,7 +12,7 @@ const Header = () => {
   }
 
   return (
-    <header className="mb-7 sm:mb-[70px]">
+    <header className="mb-7 sm:mb-17.5">
       <nav className="flex items-center justify-between">
         {/* Логотип */}
         <img className="z-30 h-10 xl:h-full" src={Logo} alt="Logo" />
@@ -24,7 +24,12 @@ const Header = () => {
               key={ind}
               className="hover:bg-green transition-colors ease-in-out"
             >
-              <a href="/#">{item.title}</a>
+              <a
+                href="/#"
+                className="focus-visible:outline-green focus-visible:outline-offset-4"
+              >
+                {item.title}
+              </a>
             </li>
           ))}
           <li>

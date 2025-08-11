@@ -6,7 +6,7 @@ import Button from "../UI/Button";
 
 const TeamBlock = () => {
   return (
-    <section className="mb-9 sm:mb-16 md:mb-[100px]">
+    <section className="mb-9 sm:mb-16 md:mb-25">
       <BlockTitle
         title="Team"
         description="Meet the skilled and experienced team behind our successful digital marketing strategies"
@@ -23,8 +23,7 @@ const TeamBlock = () => {
           />
         ))}
       </div>
-      {/* Исправить padding */}
-      <Button>See all team</Button>
+      <Button style={{ paddingInline: "76px" }}>See all team</Button>
     </section>
   );
 };

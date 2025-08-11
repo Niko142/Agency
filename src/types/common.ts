@@ -22,11 +22,10 @@ export interface PartnerItem {
 }
 
 export interface ISteps {
-  id: number;
   number: string;
-  header: string;
-  isOpen: boolean;
-  description: string;
+  title: string;
+  isOpen?: boolean;
+  content: string;
 }
 
 export interface ITestimonials {

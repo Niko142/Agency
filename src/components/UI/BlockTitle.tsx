@@ -6,7 +6,7 @@ const BlockTitle = ({
   descriptionSize,
 }: BlockTitleProps) => {
   return (
-    <div className="mb-20 flex flex-col items-start gap-x-10 gap-y-3 sm:flex-row">
+    <div className="mb-10 flex flex-col items-start gap-x-10 gap-y-3 sm:mb-20 sm:flex-row">
       <h2 className="bg-green rounded-[7px] px-[7px] leading-11 sm:leading-[51px]">
         {title}
       </h2>

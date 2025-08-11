@@ -4,7 +4,7 @@ import ServiceCard from "./ServiceCard";
 
 const ServiceBlock = () => {
   return (
-    <section className="mb-9 sm:mb-16 md:mb-[100px]">
+    <section className="mb-9 sm:mb-16 md:mb-25">
       <BlockTitle
         title="Services"
         description="At our digital marketing agency, we offer a range of services to

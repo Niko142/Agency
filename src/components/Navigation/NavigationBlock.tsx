@@ -6,9 +6,9 @@ import Button from "@components/UI/Button";
 
 const NavigationBlock = () => {
   return (
-    <section className="navigation-bar mb-20 pt-8 sm:pt-[60px] md:mb-34 lg:mb-[140px]">
+    <section className="navigation-bar mb-20 pt-8 sm:pt-15 md:mb-34 lg:mb-35">
       <Header />
-      <div className="mb-12 flex flex-col justify-between gap-y-4 sm:mb-[70px] md:flex-row">
+      <div className="mb-12 flex flex-col justify-between gap-y-4 sm:mb-17.5 md:flex-row">
         <article className="flex flex-col gap-5 md:max-w-[531px] md:gap-[35px]">
           <h1 className="leading-14 sm:leading-[77px]">
             Navigating the digital landscape for success

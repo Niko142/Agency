@@ -6,6 +6,7 @@
   --green: #b9ff66;
   --dark: #191a23;
   --grey: #f3f3f3;
+  --placeholder: #898989;
   font-family:
     "SpaceGrotesk",
     Arial,
@@ -57,6 +58,16 @@ h3 {
 
 h4 {
   font-size: 20px;
+}
+
+::placeholder {
+  color: var(--placeholder);
+}
+
+@media screen and (max-width: 992px) {
+  #form--image {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 640px) {
