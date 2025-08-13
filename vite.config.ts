@@ -12,6 +12,7 @@ export default defineConfig({
       "@assets": path.resolve(__dirname, "src/assets"),
       "@components": path.resolve(__dirname, "src/components"),
       "@types": path.resolve(__dirname, "src/types"),
+      "@images": path.resolve(__dirname, "src/assets/images"),
     },
   },
   assetsInclude: ["**/*.woff2"],

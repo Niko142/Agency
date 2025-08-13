@@ -1,9 +1,9 @@
-import JohnPhoto from "@assets/images/John.png";
-import JanePhoto from "@assets/images/Jane.png";
-import MichaelPhoto from "@assets/images/Michael.png";
-import EmilyPhoto from "@assets/images/Emily.png";
-import BrianPhoto from "@assets/images/Brian.png";
-import SarahPhoto from "@assets/images/Sarah.png";
+import JohnPhoto from "@images/John.png";
+import JanePhoto from "@images/Jane.png";
+import MichaelPhoto from "@images/Michael.png";
+import EmilyPhoto from "@images/Emily.png";
+import BrianPhoto from "@images/Brian.png";
+import SarahPhoto from "@images/Sarah.png";
 import type { ITeamMember } from "@/types";
 
 export const teamMembers: ITeamMember[] = [

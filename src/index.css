@@ -36,6 +36,7 @@
   --color-dark: #191a23;
   --color-green: #b9ff66;
   --color-grey: #f3f3f3;
+  --color-gray: #292a32;
 
   --custom-shadow: 0 5px var(--color-dark);
 }

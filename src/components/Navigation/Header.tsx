@@ -1,7 +1,7 @@
-import { headerOptions } from "@/data/data";
-import Logo from "@assets/images/logo.png";
-import BurgerMenuButton from "@components/UI/BurgerIcon";
 import { useState } from "react";
+import { headerOptions } from "@/data/data";
+import Logo from "@images/Logos/logo.png";
+import BurgerMenuButton from "@components/UI/BurgerIcon";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,14 +15,14 @@ const Header = () => {
     <header className="mb-7 sm:mb-17.5">
       <nav className="flex items-center justify-between">
         {/* Логотип */}
-        <img className="z-30 h-10 xl:h-full" src={Logo} alt="Logo" />
+        <img className="z-30 h-10 shrink-0 xl:h-full" src={Logo} alt="Logo" />
 
         {/* Desktop-bar */}
         <ul className="hidden items-center gap-10 text-lg leading-6 lg:flex xl:text-xl xl:leading-7">
           {headerOptions.map((item, ind) => (
             <li
               key={ind}
-              className="hover:bg-green transition-colors ease-in-out"
+              className="hover:bg-green bg-transparent transition-colors duration-300 ease-in-out"
             >
               <a
                 href="/#"

@@ -8,7 +8,7 @@ export const headerOptions = [
   { title: "Blog" },
 ];
 
-export const testimonials: ITestimonials[] = [
+export const testimonialsSlides: ITestimonials[] = [
   {
     id: 1,
     name: "John Smith",

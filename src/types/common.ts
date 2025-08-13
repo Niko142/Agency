@@ -21,10 +21,15 @@ export interface PartnerItem {
   href?: string;
 }
 
+export interface FooterItemProps {
+  id: string;
+  href: string;
+  content: React.ReactElement | string;
+}
+
 export interface ISteps {
   number: string;
   title: string;
-  isOpen?: boolean;
   content: string;
 }
 

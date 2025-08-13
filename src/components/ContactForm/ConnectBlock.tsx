@@ -1,6 +1,6 @@
 import BlockTitle from "@components/UI/BlockTitle";
 import ContactForm from "./ContactForm";
-import FormImage from "@assets/images/Mask.svg";
+import FormImage from "@images/Mask.svg";
 
 const ConnectBlock = () => {
   return (

@@ -4,7 +4,7 @@ import AccordionSteps from "./AccordionSteps";
 
 const WorkingProcessBlock = () => {
   return (
-    <section>
+    <section className="mb-20 md:mb-34 lg:mb-35">
       <BlockTitle
         title="Our working process"
         description="Step-by-Step Guide to Achieving Your Business Goals"

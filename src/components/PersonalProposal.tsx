@@ -1,5 +1,5 @@
 import Button from "./UI/Button";
-import Proposal from "@assets/images/proposal.png";
+import Proposal from "@images/proposal.png";
 const PersonalProposal = () => {
   return (
     <section className="proposal relative mb-14 py-[23.5px] sm:mb-24 md:mb-35">

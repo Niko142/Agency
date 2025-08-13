@@ -4,7 +4,6 @@ export const processSteps: ISteps[] = [
   {
     number: "01",
     title: "Consultation",
-    isOpen: false,
     content: `During the initial consultation, we will discuss your 
     business goals and objectives, target audience, and current marketing efforts. 
     This will allow us to understand your needs and tailor our services to best fit your requirements.`,
@@ -15,7 +14,6 @@ export const processSteps: ISteps[] = [
     content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Libero molestias iusto ullam autem nulla aspernatur earum corporis aliquid quia 
     saepe mollitia nobis temporibus inventore est magnam dolorem perferendis, sapiente repudiandae.`,
-    isOpen: false,
   },
   {
     number: "03",
@@ -23,7 +21,6 @@ export const processSteps: ISteps[] = [
     content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Libero molestias iusto ullam autem nulla aspernatur earum corporis aliquid quia 
     saepe mollitia nobis temporibus inventore est magnam dolorem perferendis, sapiente repudiandae.`,
-    isOpen: false,
   },
   {
     number: "04",
@@ -31,7 +28,6 @@ export const processSteps: ISteps[] = [
     content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Libero molestias iusto ullam autem nulla aspernatur earum corporis aliquid quia 
     saepe mollitia nobis temporibus inventore est magnam dolorem perferendis, sapiente repudiandae.`,
-    isOpen: false,
   },
   {
     number: "05",
@@ -39,7 +35,6 @@ export const processSteps: ISteps[] = [
     content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Libero molestias iusto ullam autem nulla aspernatur earum corporis aliquid quia 
     saepe mollitia nobis temporibus inventore est magnam dolorem perferendis, sapiente repudiandae.`,
-    isOpen: false,
   },
   {
     number: "06",
@@ -47,6 +42,5 @@ export const processSteps: ISteps[] = [
     content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
     Libero molestias iusto ullam autem nulla aspernatur earum corporis aliquid quia 
     saepe mollitia nobis temporibus inventore est magnam dolorem perferendis, sapiente repudiandae.`,
-    isOpen: false,
   },
 ];
