@@ -46,7 +46,7 @@ const FooterForm = () => {
       />
       <Button
         onClick={handleSubmit}
-        className="bg-green hover:bg-dark cursor-pointer rounded-[14px] px-5 py-3.5 text-lg leading-6 text-nowrap text-black transition-colors duration-300 ease-in-out hover:text-white sm:px-[35px] sm:py-5 sm:text-xl sm:leading-7"
+        className="bg-green cursor-pointer rounded-[14px] px-5 py-3.5 text-lg leading-6 text-nowrap text-black transition-colors duration-300 ease-in-out hover:bg-white sm:px-[35px] sm:py-5 sm:text-xl sm:leading-7"
       >
         Subscribe to news
       </Button>

@@ -50,7 +50,7 @@ const Footer = () => {
       <hr className="text-white" />
       <div className="flex flex-col gap-3 text-center text-base leading-6 text-white sm:flex-row sm:gap-10 sm:text-left sm:text-lg sm:leading-7">
         <p>© 2023 Positivus. All Rights Reserved.</p>
-        <a className="cursor-pointer underline hover:opacity-85">
+        <a href="/#" className="cursor-pointer underline hover:opacity-85">
           Privacy Policy
         </a>
       </div>

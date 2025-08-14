@@ -1,7 +1,7 @@
 import PartnerLinks from "@components/Links/PartnerLinks";
 import Header from "./Header";
 import Button from "@components/UI/Button";
-import Navigate from "@images/navigate.png";
+import Navigate from "@images/navigate.webp";
 
 const NavigationBlock = () => {
   return (

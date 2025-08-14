@@ -23,17 +23,17 @@ export const PARTNER_ITEMS: PartnerItem[] = [
 
 export const FooterItems: FooterItemProps[] = [
   {
-    id: "linkedIn",
+    id: "LinkedIn",
     href: "/https://linkedin.com",
     content: React.createElement(LinkedInIcon),
   },
   {
-    id: "facebook",
+    id: "Facebook",
     href: "/https://facebook.com",
     content: React.createElement(FacebookIcon),
   },
   {
-    id: "twitter",
+    id: "Twitter",
     href: "/https://x.com",
     content: React.createElement(TwitterIcon),
   },

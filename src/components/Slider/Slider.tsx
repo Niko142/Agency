@@ -3,6 +3,8 @@ import type { SliderConfig } from "./type";
 import { testimonialsSlides } from "@/data/data";
 import Pagination from "./Pagination";
 import SliderCard from "./SliderCard";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState<number>(0); // Индекс текущего слайда
@@ -12,6 +14,7 @@ export default function Slider() {
     containerWidth: 0, // Ширина контейнера
     gap: 0, // Отступ между слайдами
   });
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   // Аналог ResizeObserver
   useEffect(() => {
@@ -54,6 +57,8 @@ export default function Slider() {
       }
 
       setConfig(newOptions);
+      setTimeout(() => setIsLoading(false), 1500);
+      // setIsLoading(false);
     };
 
     handleResize();
@@ -91,36 +96,51 @@ export default function Slider() {
 
   return (
     <div className="bg-dark mb:pb-17 relative rounded-[45px] py-10 sm:py-14 md:pt-21">
-      {/* Wrapper слайдов */}
       <div
         className="mx-auto overflow-hidden"
-        style={{ width: `${config.containerWidth}px` }}
+        style={{ width: `${config.containerWidth || "100%"}px` }}
       >
-        <div
-          className="flex transition-transform duration-500"
-          style={{
-            gap: `${config.gap}px`,
-            transform: `translateX(${translateX}px)`,
-          }}
-        >
-          {testimonialsSlides.map((slide) => (
-            <SliderCard
-              key={slide.id}
-              slideItem={slide}
-              width={config.slideWidth}
-            />
-          ))}
-        </div>
+        {isLoading ? (
+          <div className="flex justify-center gap-4">
+            {Array.from({ length: 4 }).map((_, idx) => (
+              <Skeleton
+                key={idx}
+                width={200}
+                height={200}
+                borderRadius={24}
+                baseColor="#2d2d2d"
+                highlightColor="#3a3a3a"
+              />
+            ))}
+          </div>
+        ) : (
+          <div
+            className="flex transition-transform duration-500"
+            style={{
+              gap: `${config.gap}px`,
+              transform: `translateX(${translateX}px)`,
+            }}
+          >
+            {testimonialsSlides.map((slide) => (
+              <SliderCard
+                key={slide.id}
+                slideItem={slide}
+                width={config.slideWidth}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Пагинация */}
-      <Pagination
-        slidesData={testimonialsSlides}
-        currentSlide={currentSlide}
-        onDotClick={onDotClick}
-        onNext={nextSlide}
-        onPrev={prevSlide}
-      />
+      {!isLoading && (
+        <Pagination
+          slidesData={testimonialsSlides}
+          currentSlide={currentSlide}
+          onDotClick={onDotClick}
+          onNext={nextSlide}
+          onPrev={prevSlide}
+        />
+      )}
     </div>
   );
 }

@@ -4,4 +4,5 @@ export interface InfoLinkProps {
 
 export interface EmployeeLinkProps {
   link?: string;
+  ariaLabel: string;
 }

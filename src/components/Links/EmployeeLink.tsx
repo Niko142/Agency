@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { EmployeeLinkProps } from "./types";
 
-const EmployeeLink = ({ link = "/#" }: EmployeeLinkProps) => {
+const EmployeeLink = ({ link = "/#", ariaLabel }: EmployeeLinkProps) => {
   const [isEnter, setIsEnter] = useState(false);
 
   const handleMouseEnter = () => {
@@ -18,6 +18,7 @@ const EmployeeLink = ({ link = "/#" }: EmployeeLinkProps) => {
       className="absolute top-0 right-0 cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      aria-label={ariaLabel}
     >
       <svg
         width="34"
